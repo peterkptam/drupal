@@ -32,9 +32,6 @@ RUN curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.ta
 	&& rm drupal.tar.gz \
 	&& chown -R www-data:www-data sites modules themes \
 	&& chown www-data:www-data /var/www/html
-	
-#Pull down drupal source
-RUN curl -fSL "http://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o /usr/src/drupal-${DRUPAL_VERSION}.tar.gz
 
 #Pull down drush
 RUN curl -fSL "http://files.drush.org/drush.phar" -o /usr/local/bin/drush
